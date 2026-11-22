@@ -30,13 +30,13 @@ SECRET PHRASE (must appear on the app page): ISOM5160-HW2-SMS
 # Student ID: 21418705
 #
 # GenAI acknowledgment (required if you used GenAI; otherwise write "None"):
-#   - Tools used: Gemini
-#   - How you used them: It was used to assist with understanding Python concepts, explaining code syntax, and debudding errors.
+#   - Tools used: Gemini / ChatGPT
+#   - How you used them: They were used to assist with understanding Python concepts, explaining code syntax, and debudding errors.
 #
 # Q1. Who is the primary business user of this app?
 #     (one short sentence; e.g., an employee or a security analyst reviewing
 #      inbound SMS for spam or scam-like messages)
-#   YOUR_ANSWER: 
+#   YOUR_ANSWER: A bank's security analyst who checks SMS messages reported by customers to find spam or scam messages.
 #
 # Q2. Look at the accuracy from your 100-sample test. Is accuracy enough
 #     for a business to rely on this app, and why or why not?
@@ -44,8 +44,10 @@ SECRET PHRASE (must appear on the app page): ISOM5160-HW2-SMS
 #     YOUR app run. Comment on the cost of a false positive (blocking a
 #     legitimate SMS, such as a bank or one-time code message) versus a
 #     false negative (missing a spam or scam-like message).
-#   YOUR_ANSWER: 
-#
+#   YOUR_ANSWER: My run got 99.00% accuracy (99 out of 100 correct), which is high, but 100 messages is a small test so I would not fully rely on it yet.
+#                A false positive is costly because blocking a real bank SMS or OTP can stop a customer from logging in or paying.
+#                A false negative is also risky since a missed scam SMS can lead to stolen money or data.
+#                So the app is good for flagging suspicious SMS, but a person should still check before blocking.
 # =============================================================================
 
 import streamlit as st
